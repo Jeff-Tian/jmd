@@ -2,7 +2,19 @@
 
 ---
 
-> Demo command line app written in Java
+> Demo command line app written in Java, that displays QR code in terminal
+
+## Example Usage
+
+```shell
+git clone https://github.com/Jeff-Tian/jmd
+cd jmd
+mvn install
+java -jar target\jmd-1.0-SNAPSHOT.jar qr -t https://mp.weixin.qq.com/s/Pejeysn-_Kp1r2EWYAK4gw
+```
+
+The output is as follows:
+![](./screenshot.png)
 
 ## How was it created?
 
@@ -57,18 +69,24 @@ mvn install
 Creates platform independent binary executable .jar or .war file in the target/ folder
 
 ## Run from local
+
 ```shell
 java src\main\java\com\uniheart\app\App.java
 ```
 
-or 
+or `mvn install` first, then
+
+```shell
+java -jar target\jmd-1.0-SNAPSHOT.jar
+```
+or
+
 ```shell
 # Hello World
 java -classpath C:\Users\jeff\jmd\target\classes;C:\Users\jeff\.m2\repository\info\picocli\picocli\3.9.6\picocli-3.9.6.jar com.uniheart.app.App
 
 # qr
-java -classpath C:\Users\jeff\jmd\target\classes;C:\Users\jeff\.m2\repository\info\picocli\picocli\3.9.6\picocli-3.9.
-6.jar com.uniheart.app.App qr -t abc
+java -classpath C:\Users\jeff\jmd\target\classes;C:\Users\jeff\.m2\repository\info\picocli\picocli\3.9.6\picocli-3.9.6.jar;C:\Users\jeff\.m2\repository\com\google\zxing\core\3.3.0\core-3.3.0.jar;C:\Users\jeff\.m2\repository\com\google\zxing\javase\3.3.0\javase-3.3.0.jar;C:\Users\jeff\.m2\repository\com\beust\jcommander\1.48\jcommander-1.48.jar;C:\Users\jeff\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.3.1\jai-imageio-core-1.3.1.jar com.uniheart.app.App qr -t https://mp.weixin.qq.com/s/Pejeysn-_Kp1r2EWYAK4gw
 ```
 
 or
