@@ -1,13 +1,18 @@
 package com.uniheart.app;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import picocli.CommandLine;
+
+@CommandLine.Command(
+        name = "hello",
+        description = "Says hello"
+)
+public class App implements Runnable {
+    public static void main(String[] args) {
+        CommandLine.run(new App(), args);
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Hello World!");
     }
 }

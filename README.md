@@ -63,7 +63,12 @@ java src\main\java\com\uniheart\app\App.java
 
 or 
 ```shell
-java -cp target\jmd-1.0-SNAPSHOT.jar com.uniheart.app.App
+java -classpath C:\Users\jeff\jmd\target\classes;C:\Users\jeff\.m2\repository\info\picocli\picocli\3.9.6\picocli-3.9.6.jar com.uniheart.app.App
+```
+
+or
+```shell
+java -jar target\jmd-1.0-SNAPSHOT.jar
 ```
 
 ## Troubleshooting on Windows 10
