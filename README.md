@@ -63,7 +63,12 @@ java src\main\java\com\uniheart\app\App.java
 
 or 
 ```shell
+# Hello World
 java -classpath C:\Users\jeff\jmd\target\classes;C:\Users\jeff\.m2\repository\info\picocli\picocli\3.9.6\picocli-3.9.6.jar com.uniheart.app.App
+
+# qr
+java -classpath C:\Users\jeff\jmd\target\classes;C:\Users\jeff\.m2\repository\info\picocli\picocli\3.9.6\picocli-3.9.
+6.jar com.uniheart.app.App qr
 ```
 
 or

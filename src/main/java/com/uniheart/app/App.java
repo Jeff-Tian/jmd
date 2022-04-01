@@ -8,7 +8,10 @@ import picocli.CommandLine;
 )
 public class App implements Runnable {
     public static void main(String[] args) {
-        CommandLine.run(new App(), args);
+        var cmd = new CommandLine(new App());
+        cmd.addSubcommand("qr", new QrCodeCommand());
+
+        cmd.parseWithHandler(new CommandLine.RunLast(), args);
     }
 
     @Override
