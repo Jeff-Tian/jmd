@@ -68,7 +68,7 @@ java -classpath C:\Users\jeff\jmd\target\classes;C:\Users\jeff\.m2\repository\in
 
 # qr
 java -classpath C:\Users\jeff\jmd\target\classes;C:\Users\jeff\.m2\repository\info\picocli\picocli\3.9.6\picocli-3.9.
-6.jar com.uniheart.app.App qr
+6.jar com.uniheart.app.App qr -t abc
 ```
 
 or
